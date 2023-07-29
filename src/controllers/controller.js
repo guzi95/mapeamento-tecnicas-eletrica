@@ -1,4 +1,4 @@
-const tecnicasModel = require('../models/tecnicasEletrica.json')
+const tecnicasModel = require('../models/tecnicasEletrica')
 
 const getAllTecnicas = async (require, response) => {
     try {
