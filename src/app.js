@@ -14,5 +14,11 @@ app.use(cors());
 
 app.use('/', cors(), tecnicasRoutes)  // Rota raiz.
 
+const swaggerUi = require('swagger-ui-express');
+
+    const swaggerFile = require('../swagger/swagger_output.json');
+
+    app.use('/minha-rota-de-documentacao', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+
 // Exportando para usar o server.js
 module.exports = app
