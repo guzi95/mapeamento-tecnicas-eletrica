@@ -1,11 +1,14 @@
-const express = require('express') // Importa o express.
-const app = express()  // Executa o express.
-app.use(express.json())  // uso o body parse.
+const express = require('express'); // Importando o express.
+const cors = require("cors");
 
-const songsroutes = require("./routes/routes")  // Importa as rotas de músicas.
-app.use("reprogramafy/playlist", songsRoutes)  // Definiu rota padrão para músicas
+const mongoose = require('./database/dbConnect')
+const routes = require('./routes/route.js')  // Importa as rotas.
 
-const podcastsRoutes = require("./routes/podcastsRoutes")
-app.use("/reprogramafy/podcasts", podcastsRoutes)
+app.use(express.json());
+app.use(cors());
+mongoose.connect();
 
+app.use('/rotaRaiz', routes)  // Rota raiz.
+
+// Exportando para usar o server.js
 module.exports = app
