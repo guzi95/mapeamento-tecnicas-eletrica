@@ -1,13 +1,14 @@
+const DATABASE_URI = process.env.DATABASE_URI
+
 const mongoose = require("mongoose");
 
 const connect = async () => {
     try {
-        mongoose.connect("mongodb+srv://julianajsf95:qKZI8B4uTnrL5vhO@cluster0.r4hjxbw.mongodb.net/armazenamento",
-        {useNewUrlParser: true,
-            useUnifiedTopology: true
-        }
-        )
-        console.log("está on");
+        mongoose.connect(DATABASE_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+        });
+        console.log("Banco de dados está conectado!");
     } catch (error) {
         console.log(error)
     }
