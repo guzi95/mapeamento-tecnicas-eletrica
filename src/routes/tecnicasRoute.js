@@ -5,11 +5,17 @@ const router = express.Router()  // Funcao de rotas do express.
 
 // Router. metodo http (rota, funcao)
 
-router.get("/all", controller.getAllTecnicas);
-router.get("/:id", controller.getTecnicaById);
-router.post("/new", controller.addNewTecnicas);
-router.patch("/:id", controller.updateTecnicaById);
-router.delete("/:id", controller.deleteTecnica);
+router.get('/', (req, res) => {
+    res.status(200).send({
+        status: "Connected"
+    })
+})
+
+router.get("/all", controllers.getAllTecnicas);
+router.get("/:id", controllers.getTecnicaById);
+router.post("/new", controllers.addNewTecnicas);
+router.patch("/:id", controllers.updateTecnicaById);
+router.delete("/:id", controllers.deleteTecnica);
 
 // Exportando as rotas.
 module.exports = router;
