@@ -30,7 +30,6 @@ const addNewTecnicas = async (require, response) => {
     };
   };
 
-
   const updateTecnicaById = async (require, response) => {
     try {
       const {
@@ -66,7 +65,6 @@ const addNewTecnicas = async (require, response) => {
       response.status(500).json({ message: error.message });
     };
   };
-
 
 module.exports = {
   getAllTecnicas,
