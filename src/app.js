@@ -19,7 +19,7 @@ const swaggerUi = require('swagger-ui-express');
 
     const swaggerFile = require('../swagger/swagger_output.json');
 
-    app.use('/documentacao', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+    app.use('', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 // Exportando para usar o server.js
 module.exports = app
