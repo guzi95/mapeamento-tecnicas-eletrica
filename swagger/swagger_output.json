@@ -3,9 +3,9 @@
   "info": {
     "version": "1.0.0",
     "title": "REST API",
-    "description": ""
+    "description": "API para cadastro de profissionais mulheres na área de eletricidade."
   },
-  "host": "localhost:3000",
+  "host": "https://mapeamento-tecnicas-eletrica.onrender.com/",
   "basePath": "/",
   "schemes": [
     "http"
