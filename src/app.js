@@ -13,7 +13,7 @@ mongoose.connect();
 app.use(express.json());
 app.use(cors());
 
-app.use('/', cors(), tecnicasRoutes)  // Rota raiz.
+app.use('/documentacao', cors(), tecnicasRoutes)  // Rota raiz.
 
 const swaggerUi = require('swagger-ui-express');
 
