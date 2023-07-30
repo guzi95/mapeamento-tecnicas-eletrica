@@ -1,10 +1,10 @@
-const DATABASE_URI = process.env.DATABASE_URI
+const MONGODB_CONEXAO = process.env.MONGODB_CONEXAO
 
 const mongoose = require("mongoose");
 
 const connect = async () => {
     try {
-        mongoose.connect(DATABASE_URI, {
+        mongoose.connect(MONGODB_CONEXAO, {
         useNewUrlParser: true,
         useUnifiedTopology: true
         });
