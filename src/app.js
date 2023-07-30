@@ -13,13 +13,13 @@ mongoose.connect();
 app.use(express.json());
 app.use(cors());
 
-app.use('documentacao', cors(), tecnicasRoutes)  // Rota raiz.
+app.use('/', cors(), tecnicasRoutes)  // Rota raiz.
 
 const swaggerUi = require('swagger-ui-express');
 
     const swaggerFile = require('../swagger/swagger_output.json');
 
-    app.use('', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+    app.use('documentacao', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 // Exportando para usar o server.js
 module.exports = app
