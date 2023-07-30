@@ -4,7 +4,7 @@ const cors = require('cors');
 const router = express.Router()
 
 const tecnicasRoutes = require('./routes/tecnicasRoute.js')  // Importa as rotas.
-const mongoose = require('./database/database.js')
+const mongoose = require('./database/dbConnect.js')
 
 const app = express();
 
